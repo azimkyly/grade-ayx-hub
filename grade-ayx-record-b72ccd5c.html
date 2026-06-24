@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>了解站点 · 爱游戏</title>
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #f7f7f7;
+            color: #1e1e1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+            padding: 2rem 1rem;
+        }
+        .page {
+            max-width: 680px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 28px;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.04);
+            padding: 2.8rem 2rem 3.2rem;
+        }
+        @media (max-width: 480px) {
+            .page {
+                padding: 2rem 1.2rem;
+            }
+        }
+        /* hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .hero h1 {
+            font-size: 2.2rem;
+            font-weight: 440;
+            letter-spacing: -0.01em;
+            color: #1f1f1f;
+            margin-bottom: 0.6rem;
+        }
+        .hero .sub {
+            font-size: 1.05rem;
+            color: #5f5f5f;
+            font-weight: 350;
+            max-width: 480px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        /* section */
+        section {
+            margin-bottom: 2.8rem;
+        }
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 460;
+            letter-spacing: 0.01em;
+            color: #1c1c1c;
+            margin-bottom: 0.9rem;
+            border-bottom: 1px solid #eaeaea;
+            padding-bottom: 0.5rem;
+        }
+        p {
+            margin-bottom: 1.1rem;
+            color: #333;
+        }
+        .text-meta {
+            color: #5e5e5e;
+            font-size: 0.95rem;
+        }
+        .highlight {
+            background: #f2f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 400;
+        }
+        /* advantage cards */
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-top: 0.2rem;
+        }
+        @media (max-width: 460px) {
+            .advantage-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background: #f8f9fb;
+            border-radius: 18px;
+            padding: 1.2rem 1rem 1.1rem;
+            transition: background 0.15s;
+        }
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #161616;
+            margin-bottom: 0.25rem;
+        }
+        .card p {
+            font-size: 0.92rem;
+            color: #4b4b4b;
+            margin-bottom: 0;
+        }
+        /* faq summary */
+        .faq-item {
+            padding: 0.8rem 0 0.5rem;
+            border-bottom: 1px solid #ececec;
+        }
+        .faq-item:last-of-type {
+            border-bottom: none;
+        }
+        .faq-q {
+            font-weight: 490;
+            color: #1f1f1f;
+        }
+        .faq-a {
+            margin-top: 0.2rem;
+            color: #4f4f4f;
+            font-size: 0.95rem;
+        }
+        /* footer */
+        .footer-links {
+            margin-top: 2.4rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid #e2e2e2;
+            font-size: 0.9rem;
+            color: #6a6a6a;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 0.6rem 1.2rem;
+        }
+        .footer-links a {
+            color: #236b9e;
+            text-decoration: none;
+            font-weight: 440;
+            border-bottom: 1px dotted transparent;
+        }
+        .footer-links a:hover {
+            border-bottom-color: #236b9e;
+        }
+        .footer-links .site-credit {
+            color: #7a7a7a;
+        }
+        .inline-link {
+            color: #236b9e;
+            text-decoration: none;
+            font-weight: 440;
+            border-bottom: 1px solid #d4dee8;
+        }
+        .inline-link:hover {
+            border-bottom-color: #236b9e;
+        }
+        .btn-outline {
+            display: inline-block;
+            padding: 0.5rem 1.4rem;
+            border-radius: 40px;
+            border: 1px solid #c6d0db;
+            color: #2b4b69;
+            font-size: 0.9rem;
+            font-weight: 430;
+            text-decoration: none;
+            transition: all 0.15s;
+            background: transparent;
+            margin-top: 0.6rem;
+        }
+        .btn-outline:hover {
+            background: #edf2f8;
+            border-color: #a0b2c7;
+        }
+        .note {
+            background: #f4f6f9;
+            border-radius: 20px;
+            padding: 1.2rem 1.4rem;
+            margin: 1.6rem 0 0.8rem;
+            font-size: 0.95rem;
+            color: #2f3f4f;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #eaeaea;
+            margin: 1.8rem 0;
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <!-- hero 区 -->
+    <div class="hero">
+        <h1>关于这个站点</h1>
+        <div class="sub">
+            一份围绕 <strong><a href="https://grade-ayx.com.cn" class="inline-link">爱游戏</a></strong> 的信息索引与说明页，
+            不制造焦虑，只是安静地介绍。
+        </div>
+    </div>
+
+    <!-- 站点介绍 (说明区) -->
+    <section>
+        <h2>站点由来与立场</h2>
+        <p>
+            grade-ayx.com.cn 是一个以信息整理与呈现为主的内容页面，并非任何产品的分销或推广入口。
+            站内所提及的「爱游戏」指的是一个泛数字娱乐方向的内容集合，并非特指单一应用或品牌。
+            我们相信，清晰的说明比华丽的承诺更重要。
+        </p>
+        <p>
+            这个页面存在的目的，是让初次接触的人以最少的干扰了解 <a href="https://grade-ayx.com.cn" class="inline-link">爱游戏</a>
+            所涉及的领域、服务边界以及常见疑问。我们不收集个人数据，也不放置任何跟踪脚本。
+        </p>
+    </section>
+
+    <!-- 优势区 (简洁卡片) -->
+    <section>
+        <h2>几个值得留意的特点</h2>
+        <div class="advantage-grid">
+            <div class="card">
+                <h3>结构克制</h3>
+                <p>页面只承载必要的说明层次，没有横幅广告或弹窗，浏览体验干净。</p>
+            </div>
+            <div class="card">
+                <h3>内容稳定</h3>
+                <p>文本经过核对，不包含夸张数据或无法验证的承诺，保持可靠。</p>
+            </div>
+            <div class="card">
+                <h3>无账号体系</h3>
+                <p>无需注册、登录或留下任何联系方式，纯粹的信息展示。</p>
+            </div>
+            <div class="card">
+                <h3>持续校准</h3>
+                <p>随着认知更新，页面内容会不定期修订，确保不过时、不误导。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 说明区 (补充叙述) -->
+    <section>
+        <h2>关于「爱游戏」的说明</h2>
+        <p>
+            「爱游戏」这个称谓在这里代表一种对数字内容体验的关注——它既可以指代某些游戏化服务，
+            也可以是社区讨论或资讯聚合。站内没有隐藏的推广链接，所有的引用都以
+            <a href="https://grade-ayx.com.cn" class="inline-link">爱游戏</a> 为锚点，但不对任何第三方平台或产品背书。
+        </p>
+        <p class="text-meta">
+            如果你是通过某种推荐或搜索来到这个页面，希望它恰好回答了你最想知道的那几件事。
+            若仍有不确定，可以顺着页面底部的信息做一些延伸了解。
+        </p>
+    </section>
+
+    <!-- FAQ 摘要区 -->
+    <section>
+        <h2>常见疑问 · 简短摘要</h2>
+        <div class="faq-item">
+            <div class="faq-q">这个网站需要下载什么吗？</div>
+            <div class="faq-a">不需要。页面完全基于 HTML 展示，无 App 或客户端要求。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">“爱游戏”与具体公司有关联吗？</div>
+            <div class="faq-a">没有直接从属或代理关系。名称仅为内容主题指代，详情可参考上方介绍。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">信息多久更新一次？</div>
+            <div class="faq-a">根据实际情况不定期修订，尽量保持内容时效性与准确性。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-q">链接指向哪里？</div>
+            <div class="faq-a">站内链接均指向 grade-ayx.com.cn 域名下页面，外部链接会明确标注。</div>
+        </div>
+    </section>
+
+    <!-- 一段提示/补充说明，增加自然叙述感 -->
+    <div class="note">
+        <span style="font-weight: 450;">一点叙述：</span>
+        如果你正在寻找与 <a href="https://grade-ayx.com.cn" class="inline-link">爱游戏</a> 相关的更多背景，
+        不妨把当前页面当作一个安静的起点。它不追求华丽的包装，只希望提供清晰的轮廓。
+    </div>
+
+    <!-- 底部链接区 -->
+    <div class="footer-links">
+        <span><a href="https://grade-ayx.com.cn">爱游戏</a> · 信息页</span>
+        <span class="site-credit">grade-ayx.com.cn</span>
+    </div>
+
+    <!-- 极简分隔与最后一行 -->
+    <hr>
+    <p style="font-size:0.8rem; color:#888; margin-top:-0.2rem; line-height:1.4;">
+        本页面不构成任何形式的投资或消费建议。内容仅供参考。
+    </p>
+</div>
+</body>
+</html>
