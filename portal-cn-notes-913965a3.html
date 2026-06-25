@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ggbet 知识库 · 持续关注页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 2.8rem 1.5rem 3.5rem;
+        }
+
+        /* 标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.2rem;
+            color: #0f172a;
+            line-height: 1.2;
+        }
+
+        .subhead {
+            font-size: 1.05rem;
+            color: #475569;
+            margin-top: 0.4rem;
+            margin-bottom: 2.8rem;
+            border-left: 3px solid #cbd5e1;
+            padding-left: 1rem;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-top: 2.8rem;
+            margin-bottom: 0.6rem;
+            color: #1e293b;
+            letter-spacing: -0.01em;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 0.4rem;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-top: 1.8rem;
+            margin-bottom: 0.3rem;
+            color: #334155;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            font-size: 1rem;
+            color: #334155;
+        }
+
+        a {
+            color: #2563eb;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.15s, color 0.15s;
+        }
+
+        a:hover {
+            border-bottom-color: #2563eb;
+            color: #1d4ed8;
+        }
+
+        /* 提示区 — 简约卡片 */
+        .notice-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.6rem 1.8rem;
+            margin: 2rem 0 1.2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+        }
+
+        .notice-box p {
+            margin-bottom: 0.5rem;
+        }
+
+        .notice-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            background: #eef2ff;
+            color: #4338ca;
+            padding: 0.15rem 0.8rem;
+            border-radius: 100px;
+            margin-right: 0.3rem;
+        }
+
+        /* 相关信息区 — 卡片网格 */
+        .info-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1.6rem 0 1rem;
+        }
+
+        .info-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            padding: 1.2rem 1.3rem;
+            flex: 1 1 180px;
+            min-width: 160px;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+            transition: box-shadow 0.2s;
+        }
+
+        .info-card:hover {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+
+        .info-card .title {
+            font-weight: 500;
+            font-size: 1rem;
+            color: #1e293b;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-card .desc {
+            font-size: 0.9rem;
+            color: #64748b;
+            line-height: 1.5;
+        }
+
+        .info-card .desc a {
+            font-weight: 450;
+            border-bottom: 1px dotted #94a3b8;
+        }
+
+        .info-card .desc a:hover {
+            border-bottom-color: #2563eb;
+        }
+
+        /* FAQ 摘要 */
+        .faq-item {
+            margin: 1.2rem 0;
+        }
+
+        .faq-q {
+            font-weight: 500;
+            color: #0f172a;
+            margin-bottom: 0.15rem;
+        }
+
+        .faq-a {
+            color: #475569;
+            padding-left: 0.5rem;
+            border-left: 2px solid #e2e8f0;
+            padding-left: 1rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2e8f0;
+            margin: 2.5rem 0 1.5rem;
+        }
+
+        .footer-note {
+            color: #64748b;
+            font-size: 0.9rem;
+            border-top: 1px solid #e2e8f0;
+            padding-top: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* 响应式 */
+        @media (max-width: 500px) {
+            .page {
+                padding: 1.8rem 1.2rem 2.5rem;
+            }
+            h1 {
+                font-size: 1.7rem;
+            }
+            .info-grid {
+                flex-direction: column;
+            }
+            .info-card {
+                min-width: unset;
+                flex: 1 1 auto;
+            }
+            .notice-box {
+                padding: 1.2rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <h1>GGBet 知识库</h1>
+    <div class="subhead">再次访问 · 收藏 · 持续关注</div>
+
+    <p>
+        这份说明页围绕 <strong>ggbet</strong> 整理了一些基础信息和索引，方便你下次回来时快速定位。
+        如果你正在寻找之前浏览过的内容，或者想保持对平台更新的关注，这里整理了入口、提示和相关参考。
+    </p>
+
+    <!-- 目录感布局：说明区 -->
+    <h2>■ 说明区 · 再次访问</h2>
+    <p>
+        站点地址建议手动收藏，或直接记住主域。每次访问时，你可以通过以下方式回到信息中心：
+    </p>
+    <ul style="padding-left: 1.6rem; margin-bottom: 1.4rem; color: #334155;">
+        <li>将 <a href="https://portal-cn-ggbet.com">ggbet</a> 添加到浏览器书签栏，下次一键打开；</li>
+        <li>关注页面顶部的导航结构，熟悉入口位置；</li>
+        <li>如果更换设备，通过历史记录或直接输入域名即可。</li>
+    </ul>
+
+    <h2>■ 提示区 · 使用备忘</h2>
+    <div class="notice-box">
+        <p><span class="tag">提醒</span> 首次访问后，建议在浏览器内完成收藏。部分网络环境下可能需要刷新页面。</p>
+        <p><span class="tag">技巧</span> 如果你常用某个功能板块，可以记下对应路径，减少重复查找。</p>
+        <p><span class="tag">持续</span> 信息页会不定期更新，可隔段时间回来看看。</p>
+    </div>
+
+    <h2>■ 相关信息区</h2>
+    <p>以下卡片整理了与 <strong>ggbet</strong> 相关的几个常见关注方向，供你参考：</p>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <div class="title">平台入口</div>
+            <div class="desc">
+                直接访问 <a href="https://portal-cn-ggbet.com">ggbet</a> 获取最新界面。
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="title">功能概览</div>
+            <div class="desc">
+                包含常用模块、设置与账户管理，通常位于侧栏或顶部。
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="title">更新记录</div>
+            <div class="desc">
+                版本改动与公告会展示在信息页内，留意标有「更新」的区域。
+            </div>
+        </div>
+        <div class="info-card">
+            <div class="title">常见问题</div>
+            <div class="desc">
+                下方 FAQ 摘要覆盖了大多数基础疑问，也可直接查找帮助文档。
+            </div>
+        </div>
+    </div>
+
+    <h2>■ FAQ 摘要</h2>
+
+    <div class="faq-item">
+        <div class="faq-q">Q：我上次访问过 ggbet，这次怎么快速进入？</div>
+        <div class="faq-a">
+            直接在地址栏输入域名，或点击书签里的 <a href="https://portal-cn-ggbet.com">ggbet</a>。页面加载后会自动跳转到你上次停留的大致区域（如果浏览器保留了会话）。
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q：收藏后页面变了怎么办？</div>
+        <div class="faq-a">
+            网站会持续优化布局，但主要入口一般不变。若发现界面不同，可先查看顶部导航或侧栏，通常核心功能位置稳定。
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q：想长期关注，有什么推荐的方式？</div>
+        <div class="faq-a">
+            除了收藏 <a href="https://portal-cn-ggbet.com">ggbet</a>，你也可以定期访问该信息页，这里会汇总关键提示。另外，关注页面内的公告区域可以获取最新动态。
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <div class="faq-q">Q：忘记具体某个功能在哪里了？</div>
+        <div class="faq-a">
+            建议使用站内搜索（如果有），或者回到首页按照模块分类浏览。常见设置通常在账户或个人中心下。
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="footer-note">
+        <p>本页为持续关注与知识索引页，内容基于公开信息整理。如需反馈或修正，可参考页面内的联系方式（如有）。</p>
+        <p style="margin-top: 0.6rem; font-size: 0.85rem; color: #94a3b8;">— 信息更新于近期 · 建议定期回访 —</p>
+    </div>
+</div>
+</body>
+</html>
